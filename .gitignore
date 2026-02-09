@@ -26,3 +26,4 @@ Thumbs.db
 
 # Data (large files - keep local only if needed)
 # data/*.csv
+data/processed/
