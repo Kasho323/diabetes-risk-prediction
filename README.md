@@ -1,12 +1,27 @@
-# Data Mining - WM9QG Individual Assignment
+# Diabetes Risk Prediction & Health Profile Segmentation
 
-## Diabetes Risk Prediction and Health Insights
+> End-to-end ML pipeline on the CDC BRFSS 2015 dataset (253,680 survey responses): exploratory analysis → preprocessing → unsupervised health-risk segmentation → supervised diabetes prediction.
 
-This project applies data mining and machine learning techniques to the **CDC Diabetes Health Indicators Dataset (BRFSS 2015)** to:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+
+## Headline results
+
+| Model | Accuracy | Recall | F1 | AUC-ROC |
+|-------|----------|--------|------|---------|
+| Logistic Regression | 0.731 | **0.758** | 0.470 | 0.817 |
+| Random Forest (200 trees) | **0.807** | 0.569 | **0.482** | 0.817 |
+
+Both models reach AUC ≈ 0.82 on the binarised diabetes target. Logistic Regression is the better screening choice (higher recall — fewer missed cases); Random Forest gives more balanced predictions. Top predictors across both: `GenHlth`, `BMI`, `Age`, `HighBP`, `HighChol`.
+
+---
+
+## What's inside
+
 1. **Explore** the data through comprehensive EDA (distributions, correlations, statistical tests)
-2. **Preprocess** the data with binarisation, scaling, and SMOTE for class imbalance
-3. **Cluster** the population into meaningful health risk segments (K-Means, DBSCAN)
-4. **Classify** individuals as diabetic/non-diabetic using supervised learning (Logistic Regression, Random Forest)
+2. **Preprocess** with target binarisation, scaling, and SMOTE for class imbalance
+3. **Cluster** the population into interpretable health-risk segments (K-Means, DBSCAN)
+4. **Classify** individuals as diabetic / non-diabetic using supervised learning (Logistic Regression, Random Forest)
 
 ---
 
@@ -118,6 +133,6 @@ pip install -r requirements.txt
 
 ---
 
-## Author
+## License
 
-WM9QG-15 Fundamentals of AI and Data Mining — Individual Assessment 2025/26
+MIT — see [LICENSE](LICENSE).
