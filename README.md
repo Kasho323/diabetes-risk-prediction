@@ -1,9 +1,26 @@
 # Diabetes Risk Prediction & Health Profile Segmentation
 
-> End-to-end ML pipeline on the CDC BRFSS 2015 dataset (253,680 survey responses): exploratory analysis → preprocessing → unsupervised health-risk segmentation → supervised diabetes prediction.
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+
+![Diabetes risk prediction demo screenshot](assets/demo_screenshot.png)
+
+An end-to-end CDC BRFSS machine learning project with a simple Streamlit demo for diabetes risk screening.
+Users enter `BMI`, `Age`, `HighBP`, `HighChol`, and `GenHlth`.
+The app returns a diabetes risk estimate, top risk factors, and a clear "not a medical diagnosis" disclaimer.
+
+## Tech Stack
+
+Python, pandas, scikit-learn, imbalanced-learn, matplotlib, seaborn, Streamlit.
+
+## How to Run the Demo
+
+```bash
+pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+Then open `http://localhost:8501` in your browser.
 
 ## Headline results
 
