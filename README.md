@@ -124,6 +124,18 @@ pip install -r requirements.txt
 
 ---
 
+## Interactive Demo
+
+Run the Streamlit demo:
+
+```bash
+streamlit run app.py
+```
+
+The demo asks for five inputs: `BMI`, `Age`, `HighBP`, `HighChol`, and `GenHlth`. It outputs an estimated diabetes risk, highlights the top risk factors, and clearly states that the result is not a medical diagnosis.
+
+---
+
 ## How to Run
 
 1. Clone the repository
